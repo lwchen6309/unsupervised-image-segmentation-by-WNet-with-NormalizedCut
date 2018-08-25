@@ -27,7 +27,6 @@ In short, normalized cut measure how good the segmentation is, the procedures ar
     (2) The association and disassociation is then calculated by weight connection.
 
     (3) The normalized cut is then calculated by: 
-
         Total normalized disassociation between the groups.
         Total normalized association within the groups.
 
