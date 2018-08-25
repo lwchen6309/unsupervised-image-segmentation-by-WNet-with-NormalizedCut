@@ -20,17 +20,17 @@ For details of normalized cut, please refer to the [original paper](https://arxi
 
 In short, normalized cut measure how good the segmentation is, the procedures are as follow:
 
-(1) For a image, we calculate weight connections between any two pixels in image by their 
+    (1) For a image, we calculate weight connections between any two pixels in image by their 
 
-    brightness of pixels i.e. (R+G+B)/3.
-    distances.
+        brightness of pixels i.e. (R+G+B)/3.
+        distances.
 
-(2) The association and disassociation is then calculated by weight connection.
+    (2) The association and disassociation is then calculated by weight connection.
 
-(3) The normalized cut is then calculated by: 
+    (3) The normalized cut is then calculated by: 
 
-    Total normalized disassociation between the groups.
-    Total normalized association within the groups.
+        Total normalized disassociation between the groups.
+        Total normalized association within the groups.
 
 # Run program
     (1) The code was tested with tensorflow1.9 and python3.6. 
