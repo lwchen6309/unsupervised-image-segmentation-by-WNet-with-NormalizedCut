@@ -21,7 +21,6 @@ For details of normalized cut, please refer to the [original paper](https://arxi
 In short, normalized cut measure how good the segmentation is, the procedures are as follow:
 
     (1) For a image, we calculate weight connections between any two pixels in image by their 
-
         brightness of pixels i.e. (R+G+B)/3.
         distances.
 
