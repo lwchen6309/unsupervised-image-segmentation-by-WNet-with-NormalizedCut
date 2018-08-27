@@ -19,13 +19,18 @@ For details of normalized cut, please refer to the [original paper](https://arxi
 In short, normalized cut measure how good the segmentation is, the procedures are as follow:
 
 (1) For a image, we calculate weight connections between any two pixels in image by their 
+
     (a) Distance of brightness between pixels i.e. (R+G+B)/3.
+    
     (b) Distances of position between pixels.
     For pixels with strong connection, they are more likely belong to the same class.
 
 (2) The association and disassociation is then calculated by weight connection:
+
     (a) association: sum(weight_connection) within the class.
+    
     (b) disassociation: sum(weight_connection) between the class.
+    
     (c) normalized cut = disassociation / association
 
 # Run program
