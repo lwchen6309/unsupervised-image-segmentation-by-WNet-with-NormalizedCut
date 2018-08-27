@@ -21,12 +21,12 @@ In short, normalized cut measure how good the segmentation is, the procedures ar
     (1) For a image, we calculate weight connections between any two pixels in image by their 
         (a) Distance of brightness between pixels i.e. (R+G+B)/3.
         (b) Distances of position between pixels.
-
-    (2) The association and disassociation is then calculated by weight connection.
-
-    (3) The normalized cut is then calculated by: 
-        (a) Total normalized disassociation between the groups.
-        (b) Total normalized association within the groups.
+        For pixels with strong connection, they are more likely belong to the same class.
+        
+    (2) The association and disassociation is then calculated by weight connection:
+        (a) association: sum(weight_connection) within the class.
+        (b) disassociation: sum(weight_connection) between the class.
+        (c) normalized cut = disassociation / association
 
 # Run program
     (1) The code was tested with tensorflow1.9, python3.6 and a GTX1080 graphic cards. 
