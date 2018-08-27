@@ -57,23 +57,22 @@ Unsupervised image segmentation is perform with and without soft normalized cut.
     (5) Learning rate is reduced by half every 10000 iterations.
 
 ## (1) WNet naive (without soft normalized cut)
-Training process (for simplicity, we show only the fisrt training process.)
+### Training process (for simplicity, we show only the fisrt training process.)
 ![image](https://github.com/lwchen6309/unsupervised-image-segmentation-by-WNet-with-NormalizedCut/blob/master/image/WNet_naive_loss.png)
 
-Segmentation
+### Segmentation
 ![image](https://github.com/lwchen6309/unsupervised-image-segmentation-by-WNet-with-NormalizedCut/blob/master/image/WNet_naive_compare.png)
 
 ## (2) WNet bright 
-Training process (for simplicity, we show only the fisrt training process.)
+### Training process (for simplicity, we show only the fisrt training process.)
 ![image](https://github.com/lwchen6309/unsupervised-image-segmentation-by-WNet-with-NormalizedCut/blob/master/image/WNet_bright_loss.png)
 
-Segmentation
+### Segmentation
 ![image](https://github.com/lwchen6309/unsupervised-image-segmentation-by-WNet-with-NormalizedCut/blob/master/image/WNet_bright_compare.png)
 
 
+## Future work
 In WNet paper, there is extra post-processing like 
-
 conditional random field (CRF) to acquire satisfactory segmentations,
-
-which is currently not included in this work. 
+is currently not included in this work. (and might be added in future ...)
 
