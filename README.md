@@ -36,16 +36,16 @@ In short, normalized cut measure how good the segmentation is, the procedures ar
         (b) Run WNet_bright.py for segmentation with normalized cut.
         
         There are few arguments:
+            --mode: [train/visualize/test] 
+                train; 
+                visualize: randomly select image from dataset and predict segmentation;
+                test: load images in test_dir(by default is './data/test') and predict segmentation.
+                      test_dir can be also specified by --test_dir.
             --logs_dir: specify the directroy to restore / save.
             --num_layers: specify the number of modules for UNet.
                         (for figure above, the #modules is 9.)
             --debug: [True/False] Print extra details (activations, gradients, ...) for debug.
-            --mode: [train/visualize/test] 
-                    train; 
-                    visualize: randomly select image from dataset and predict segmentation;
-                    test: load images in test_dir(by default is './data/test') and predict segmentation.
-                          test_dir can be also specified by --test_dir.
-    
+
 # Results
 
 Unsupervised image segmentation is perform with and without soft normalized cut.
@@ -70,6 +70,10 @@ Training process (for simplicity, we show only the fisrt training process.)
 Segmentation
 ![image](https://github.com/lwchen6309/unsupervised-image-segmentation-by-WNet-with-NormalizedCut/blob/master/image/WNet_bright_compare.png)
 
-In WNet paper, there is extra post-processing like conditional random field (CRF) to acquire satisfactory segmentations,
+
+In WNet paper, there is extra post-processing like 
+
+conditional random field (CRF) to acquire satisfactory segmentations,
+
 which is currently not included in this work. 
 
