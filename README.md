@@ -1,6 +1,6 @@
 # Unsupervised-image-segmentation-by-WNet-with-NormalizedCut
 A tensorflow implementation of [WNet](https://arxiv.org/abs/1711.08506)
-for unsupervised image segmentation on VOC2012 dataset
+for unsupervised image segmentation on PASCAL VOC2012 dataset
 
 This code is revised from [FCN code by shekkizh](https://github.com/shekkizh/FCN.tensorflow)
 
@@ -76,5 +76,5 @@ Unsupervised image segmentation is perform with and without soft normalized cut.
 # Future work
 In WNet paper, there is extra post-processing like 
 conditional random field (CRF) to acquire satisfactory segmentations,
-which is currently not included in this work. (and might be added in future ...)
+which is currently not included in this work, and will be added in future.
 
