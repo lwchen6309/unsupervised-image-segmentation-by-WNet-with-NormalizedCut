@@ -50,7 +50,7 @@ In short, normalized cut measure how good the segmentation is, the procedures ar
 
 Unsupervised image segmentation is perform with and without soft normalized cut.
 
-    (1) A 5 modules WNet tested in this work; 
+    (1) A 5 modules WNet tested in this work.
     (2) The image from VOC2012 is resize to 128 * 128 pixels for limitation of memories.
     (3) The Wnet is first train with dropout rate 0.65 for 50000 iterations.
     (4) Then retrain with 0.3 for another 50000 iterations to slightly remove the pepper noise of segmentation.
