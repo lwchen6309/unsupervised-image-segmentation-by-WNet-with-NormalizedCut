@@ -50,12 +50,26 @@ In short, normalized cut measure how good the segmentation is, the procedures ar
 
 Unsupervised image segmentation is perform with and without soft normalized cut.
 
-A 5 modules WNet is train with dropout rate 0.65 for 50000 iterations.
-Then retrain with 0.3 for another 50000 iterations to slightly remove the pepper noise of segmentation.
+    (1) A 5 modules WNet tested in this work; 
+    (2) The image from VOC2012 is resize to 128 * 128 pixels for limitation of memories.
+    (3) The Wnet is first train with dropout rate 0.65 for 50000 iterations.
+    (4) Then retrain with 0.3 for another 50000 iterations to slightly remove the pepper noise of segmentation.
+    (5) Learning rate is reduced by half every 10000 iterations.
 
 ## (1) WNet naive (without soft normalized cut)
+Training process (for simplicity, we show only the fisrt training process.)
+![image](https://github.com/lwchen6309/unsupervised-image-segmentation-by-WNet-with-NormalizedCut/blob/master/image/WNet_naive_loss.png)
+
+Segmentation
 ![image](https://github.com/lwchen6309/unsupervised-image-segmentation-by-WNet-with-NormalizedCut/blob/master/image/WNet_naive_compare.png)
 
 ## (2) WNet bright 
+Training process (for simplicity, we show only the fisrt training process.)
+![image](https://github.com/lwchen6309/unsupervised-image-segmentation-by-WNet-with-NormalizedCut/blob/master/image/WNet_bright_loss.png)
+
+Segmentation
 ![image](https://github.com/lwchen6309/unsupervised-image-segmentation-by-WNet-with-NormalizedCut/blob/master/image/WNet_bright_compare.png)
+
+In WNet paper, there is extra post-processing like conditional random field (CRF) to acquire satisfactory segmentations,
+which is currently not included in this work. 
 
