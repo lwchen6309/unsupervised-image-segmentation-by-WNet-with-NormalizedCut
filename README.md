@@ -74,5 +74,5 @@ Unsupervised image segmentation is perform with and without soft normalized cut.
 ## Future work
 In WNet paper, there is extra post-processing like 
 conditional random field (CRF) to acquire satisfactory segmentations,
-is currently not included in this work. (and might be added in future ...)
+which is currently not included in this work. (and might be added in future ...)
 
