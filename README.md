@@ -18,15 +18,15 @@ For details of normalized cut, please refer to the [original paper](https://arxi
 
 In short, normalized cut measure how good the segmentation is, the procedures are as follow:
 
-    (1) For a image, we calculate weight connections between any two pixels in image by their 
-        (a) Distance of brightness between pixels i.e. (R+G+B)/3.
-        (b) Distances of position between pixels.
-        For pixels with strong connection, they are more likely belong to the same class.
-        
-    (2) The association and disassociation is then calculated by weight connection:
-        (a) association: sum(weight_connection) within the class.
-        (b) disassociation: sum(weight_connection) between the class.
-        (c) normalized cut = disassociation / association
+(1) For a image, we calculate weight connections between any two pixels in image by their 
+    (a) Distance of brightness between pixels i.e. (R+G+B)/3.
+    (b) Distances of position between pixels.
+    For pixels with strong connection, they are more likely belong to the same class.
+
+(2) The association and disassociation is then calculated by weight connection:
+    (a) association: sum(weight_connection) within the class.
+    (b) disassociation: sum(weight_connection) between the class.
+    (c) normalized cut = disassociation / association
 
 # Run program
     (1) The code was tested with tensorflow1.9, python3.6 and a GTX1080 graphic cards. 
@@ -50,11 +50,11 @@ In short, normalized cut measure how good the segmentation is, the procedures ar
 
 Unsupervised image segmentation is perform with and without soft normalized cut.
 
-    (1) A 5 modules WNet tested in this work.
-    (2) The image from VOC2012 is resize to 128 * 128 pixels for limitation of memories.
-    (3) The Wnet is first train with dropout rate 0.65 for 50000 iterations,
-        then retrain with 0.3 for another 50000 iterations.
-    (5) Learning rate is reduced by half every 10000 iterations.
+(1) A 5 modules WNet tested in this work.
+(2) The image from VOC2012 is resize to 128 * 128 pixels for limitation of memories.
+(3) The Wnet is first train with dropout rate 0.65 for 50000 iterations,
+    then retrain with 0.3 for another 50000 iterations.
+(5) Learning rate is reduced by half every 10000 iterations.
 
 ## (1) WNet naive (without soft normalized cut)
 ### Training process 
