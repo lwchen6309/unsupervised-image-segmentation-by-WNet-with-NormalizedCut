@@ -73,7 +73,7 @@ Unsupervised image segmentation is perform with and without soft normalized cut.
 ![image](https://github.com/lwchen6309/unsupervised-image-segmentation-by-WNet-with-NormalizedCut/blob/master/image/WNet_bright_compare.png)
 
 
-## Future work
+# Future work
 In WNet paper, there is extra post-processing like 
 conditional random field (CRF) to acquire satisfactory segmentations,
 which is currently not included in this work. (and might be added in future ...)
