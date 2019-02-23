@@ -7,7 +7,7 @@ import matplotlib.cm as cm
 from functools import partial
 
 
-def save_image(image, save_dir, name, mean=None):
+def save_image(image, save_dir, name):
     """
     Save image by unprocessing if mean given else just save
     :param mean:
@@ -16,8 +16,6 @@ def save_image(image, save_dir, name, mean=None):
     :param name:
     :return:
     """
-    if mean:
-        image = unprocess_image(image, mean)
     misc.imsave(os.path.join(save_dir, name + ".png"), image)
 
 
