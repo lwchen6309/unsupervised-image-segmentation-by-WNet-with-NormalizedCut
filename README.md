@@ -37,8 +37,9 @@ In short, normalized cut measure how good the segmentation is, the procedures ar
     (1) The code was tested with tensorflow1.9, python3.6 and a GTX1080 graphic cards. 
     
     (2) Train / visualize network
-        (a) Run WNet_naive.py for segmentation without normalized cut.
-        (b) Run WNet_bright.py for segmentation with normalized cut.
+        cd to "unsupervised-image-segmentation-by-WNet-with-NormalizedCut"
+        (a) Run "python src/WNet_naive.py" for segmentation without normalized cut.
+        (b) Run "python src/WNet_bright.py" for segmentation with normalized cut.
         
         There are few arguments:
             --mode: [train/visualize/test] 
@@ -76,10 +77,3 @@ Unsupervised image segmentation is perform with and without soft normalized cut.
 
 ### Segmentation
 ![image](https://github.com/lwchen6309/unsupervised-image-segmentation-by-WNet-with-NormalizedCut/blob/master/image/WNet_bright_compare.png)
-
-
-# Future work
-In WNet paper, there is extra post-processing like 
-conditional random field (CRF) to acquire satisfactory segmentations,
-which is currently not included in this work, and will be added in future.
-
