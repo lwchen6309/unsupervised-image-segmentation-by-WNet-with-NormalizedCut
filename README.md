@@ -1,8 +1,8 @@
 # Unsupervised-image-segmentation-by-WNet-with-NormalizedCut
-A tensorflow implementation of [WNet](https://arxiv.org/abs/1711.08506)
+This is a tensorflow implementation of [WNet](https://arxiv.org/abs/1711.08506)
 for unsupervised image segmentation on PASCAL VOC2012 dataset
 
-This code is revised from [FCN code by shekkizh](https://github.com/shekkizh/FCN.tensorflow)
+This source code revised based on [FCN code by shekkizh](https://github.com/shekkizh/FCN.tensorflow)
 
 # WNet
 
@@ -10,11 +10,11 @@ This code is revised from [FCN code by shekkizh](https://github.com/shekkizh/FCN
 
 (Figure from the original WNet paper)
 
-Two Unets are stacked as autoencoder to generate sementic segmentation of images.
+The WNet consists on two Unets to stack as autoencoder transforming from image to segmantion map, then back to image.
 
-An additional soft normalized cut term serve as a criterion to improve segmentation,
+In ths implementation, an additional soft normalized cut term is added to serve as a criterion to improve the segmentation.
 
-For details of normalized cut, please refer to the [original paper](https://arxiv.org/abs/1711.08506)
+In brief, the soft normalized cut measure how the segmentation map aggregates. Optimizing this measurement helps to remove the spare noise and noisy fragments in the segmentation map. Please refer to the [original paper](https://arxiv.org/abs/1711.08506) for details of normalized cut.
 
 In short, normalized cut measure how good the segmentation is, the procedures are as follow:
 
@@ -34,7 +34,7 @@ In short, normalized cut measure how good the segmentation is, the procedures ar
     (c) normalized cut = disassociation / association
 
 # Run program
-    (1) The code was tested with tensorflow1.9, python3.6 and a GTX1080 graphic cards. 
+    (1) The code was tested based on tensorflow1.9, python3.6 and a GTX1080 graphic card. Please refer the [FCN code by shekkizh](https://github.com/shekkizh/FCN.tensorflow) for further enviroment.
     
     (2) Train / visualize network
         cd to "unsupervised-image-segmentation-by-WNet-with-NormalizedCut"
